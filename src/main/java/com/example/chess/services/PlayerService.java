@@ -4,7 +4,7 @@ import com.example.chess.models.Player;
 import com.example.chess.repos.PlayerRepo;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PlayerService {
@@ -29,4 +29,7 @@ public class PlayerService {
         playerRepo.deleteById(playerId);
     }
 
+    public Optional<Player> getPlayerById(Long id){
+        return playerRepo.findById(id);
+    }
 }

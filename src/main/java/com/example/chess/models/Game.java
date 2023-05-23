@@ -33,7 +33,7 @@ public class Game {
     @JoinColumn(name="white_player_id",nullable = false)
     private Player whitePlayerName;
 
-    private Time gameTimeControl;
+    private Long gameTimeControl;
 
     public Long getGameId() {
         return gameId;
@@ -91,11 +91,11 @@ public class Game {
         this.gameStatus = gameStatus;
     }
 
-    public Time getGameTimeControl() {
+    public Long getGameTimeControl() {
         return gameTimeControl;
     }
 
-    public void setGameTimeControl(Time gameTimeControl) {
+    public void setGameTimeControl(Long gameTimeControl) {
         this.gameTimeControl = gameTimeControl;
     }
 }
